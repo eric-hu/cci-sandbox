@@ -1,5 +1,5 @@
 orbs:
-  dev_test: "eric-hu/delivery-test@1.0.1"
+  dev_test: "eric-hu/delivery-test@1.0.2"
 
 version: 2.1
 jobs:
