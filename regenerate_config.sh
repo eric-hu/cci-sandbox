@@ -2,6 +2,8 @@
 
 set -e
 
-circleci config pack .circleci/orbs > .circleci/config.yml
-cat .circleci/config-jobs-only.yml >> .circleci/config.yml
-
+# Need to remove the old config to make sure it doesn't get packed into the final product
+if [[ ! -f .circleci/config.yml ]]; then
+  rm .circleci/config.yml
+fi
+circleci config pack .circleci > .circleci/config.yml
