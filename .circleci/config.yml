@@ -3,13 +3,13 @@ orbs:
     jobs:
       my_inline_job:
         parameters:
-          name:
+          greeting_name:
             type: string
             default: olleh
         executor: my_inline_executor
         steps:
           - my_inline_command:
-              name: world
+              name: <<parameters.greeting_name>>
     commands:
       my_inline_command:
         parameters:
@@ -34,4 +34,5 @@ workflows:
           name: build
       - inline_example/my_inline_job:
           name: build2
+          greeting_name: world
 
