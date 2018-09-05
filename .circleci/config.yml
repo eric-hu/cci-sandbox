@@ -1,20 +1,11 @@
-orbs:
-  dev_test: "eric-hu/delivery-test@1.0.2"
-
 version: 2.1
 jobs:
   build:
     docker:
       - image: circleci/ruby:2.4-node
-        #environment:
-          #BUNDLE_PATH: vendor/bundle
-      #- image: circleci/mysql:5.7-ram
-        #environment:
-          #MYSQL_DATABASE: project_app_test
+        environment:
+          - BUNDLE_PATH: vendor/bundle
+            ANOTHER_VAR: foo
 
-    #environment:
-      #SECRET_FILENAME: foo
     steps:
-      - checkout
       - run: env
-      - dev_test/hello_world
