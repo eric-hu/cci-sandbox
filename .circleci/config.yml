@@ -1,20 +1,37 @@
 orbs:
-  dev_test: "eric-hu/delivery-test@1.0.2"
+  inline_example:
+    jobs:
+      my_inline_job:
+        parameters:
+          name:
+            type: string
+            default: olleh
+        executor: my_inline_executor
+        steps:
+          - my_inline_command:
+              name: world
+    commands:
+      my_inline_command:
+        parameters:
+          name:
+            type: string
+        steps:
+          - run: echo "hello <<parameters.name>>, from the inline command"
+    executors:
+      my_inline_executor:
+        parameters:
+          version:
+            type: string
+            default: "2.4"
+        docker:
+          - image: circleci/ruby:<<parameters.number>>
 
 version: 2.1
-jobs:
-  build:
-    docker:
-      - image: circleci/ruby:2.4-node
-        #environment:
-          #BUNDLE_PATH: vendor/bundle
-      #- image: circleci/mysql:5.7-ram
-        #environment:
-          #MYSQL_DATABASE: project_app_test
+workflows:
+  build-test-deploy:
+    jobs:
+      - inline_example/my_inline_job:
+          name: build
+      - inline_example/my_inline_job:
+          name: build2
 
-    #environment:
-      #SECRET_FILENAME: foo
-    steps:
-      - checkout
-      - run: env
-      - dev_test/hello_world
