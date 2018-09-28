@@ -1,6 +1,18 @@
 version: 2.1
 orbs:
   inline_example:
+    usage:
+      version: 2.1
+      orbs:
+        inline_example: eric-hu/inline_example@dev:foo
+      workflows:
+          build-test-deploy:
+            jobs:
+              - inline_example/my_inline_job:
+                  name: build
+              - inline_example/my_inline_job:
+                  name: build2
+                  greeting_name: world
     jobs:
       my_inline_job:
         parameters:
