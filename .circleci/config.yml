@@ -10,8 +10,8 @@ workflows:
   test-staging:
     jobs:
       - build:
-          name: build
+          name: build-staging
   test-and-deploy-prod:
     jobs:
       - build:
-          name: build
+          name: build-prod
