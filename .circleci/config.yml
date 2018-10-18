@@ -3,9 +3,14 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.4-node
-        environment:
-          - BUNDLE_PATH: vendor/bundle
-            ANOTHER_VAR: foo
-
     steps:
-      - run: env
+      - run: echo "test"
+
+workflows:
+  btd:
+    jobs:
+      - build
+  btd-2:
+    jobs:
+      - build
+
