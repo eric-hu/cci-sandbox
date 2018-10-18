@@ -10,7 +10,7 @@ workflows:
   btd:
     jobs:
       - build
-  #btd-2:
-    #jobs:
-      #- build
+  btd-2:
+    jobs:
+      - build
 
