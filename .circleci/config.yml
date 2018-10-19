@@ -1,11 +1,12 @@
+references:
+  default_step: &default_step
+    - run: env
 version: 2.1
 jobs:
   build:
     docker:
       - image: circleci/ruby:2.4-node
-        environment:
-          - BUNDLE_PATH: vendor/bundle
-            ANOTHER_VAR: foo
 
     steps:
-      - run: env
+      *default_step
+
