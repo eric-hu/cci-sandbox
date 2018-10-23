@@ -16,4 +16,4 @@ workflows:
   build-test-deploy:
     jobs:
       - inline_example/my_inline_job:
-          parallel: 2
+          parallel: "2"
