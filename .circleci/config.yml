@@ -1,9 +1,10 @@
 version: 2.1
 commands:
   foo-bar:
-    steps: ["echo"]
+    steps: ["checkout"]
 jobs:
   build:
     machine: true
     steps:
-      - foo-bar
+      - foo-bar:
+          baz: qux
