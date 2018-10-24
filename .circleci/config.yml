@@ -1,10 +1,13 @@
 version: 2.1
-commands:
-  foo-bar:
-    steps: ["checkout"]
+
+orbs:
+  foobar:
+    commands:
+      foo-bar:
+        steps: ["checkout"]
 jobs:
   build:
     machine: true
     steps:
-      - foo-bar:
+      - foobar/foo-bar:
           baz: qux
