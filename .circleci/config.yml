@@ -1,11 +1,8 @@
 version: 2.1
+commands:
+  Foo-bar:
+    steps: ["checkout"]
 jobs:
   build:
-    docker:
-      - image: circleci/ruby:2.4-node
-        environment:
-          - BUNDLE_PATH: vendor/bundle
-            ANOTHER_VAR: foo
-
-    steps:
-      - run: env
+    machine: true
+    steps: ["Foo-bar"]
