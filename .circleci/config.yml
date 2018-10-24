@@ -1,8 +1,9 @@
 version: 2.1
 commands:
-  Foo-bar:
-    steps: ["checkout"]
+  foo-bar:
+    steps: ["echo"]
 jobs:
   build:
     machine: true
-    steps: ["Foo-bar"]
+    steps:
+      - foo-bar
