@@ -11,3 +11,4 @@ jobs:
     steps:
       - foobar/foo-bar:
           baz: qux
+
