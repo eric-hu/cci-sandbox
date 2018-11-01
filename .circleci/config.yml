@@ -7,11 +7,12 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.4-node
-        environment:
-          TEST_VAL: foo
+    environment:
+      FROM_CONFIG: FOO
 
     steps:
-      - checkout
-      - run: export BAR=$TEST_VAL
-      - env_var_check/check_env
+      - env_var_check/check_env:
+          env_name: $FROM_CONFIG
+      - env_var_check/check_env:
+          env_name: $FROM_UI
 
