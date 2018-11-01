@@ -1,4 +1,8 @@
 version: 2.1
+
+orbs:
+  env_var_check: eric-hu/delivery-test@dev:env-var-check
+
 jobs:
   build:
     docker:
@@ -9,4 +13,5 @@ jobs:
     steps:
       - checkout
       - run: export BAR=$TEST_VAL
+      - env_var_check/check_env
 
