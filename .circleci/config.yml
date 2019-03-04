@@ -9,8 +9,4 @@ jobs:
 workflows:
   btd:
     jobs:
-      - build
-  btd-2:
-    jobs:
-      - build
-
+      - build-2
