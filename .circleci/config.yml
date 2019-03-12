@@ -1,18 +1,9 @@
 version: 2.1
 
-orbs:
-  env_var_check: eric-hu/delivery-test@dev:env-var-check
-
 jobs:
   build:
     docker:
       - image: circleci/ruby:2.4-node
-    environment:
-      FROM_CONFIG: FOO
 
     steps:
-      - env_var_check/check_env:
-          env_name: $FROM_CONFIG
-      - env_var_check/check_env:
-          env_name: $FROM_UI
-
+      - run: echo 💩
