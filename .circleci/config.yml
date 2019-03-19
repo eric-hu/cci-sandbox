@@ -10,3 +10,27 @@ jobs:
       - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
       - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
       - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
+      - run: for i in {1..50}; do       sleep 5;        echo "ping"; done
