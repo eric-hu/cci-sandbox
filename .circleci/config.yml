@@ -4,17 +4,9 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.4-node
-      - image: mongo@sha256:bbd9c8d7a38cf23fa320a4702d62d3ac67ac058ebaaff29cdf53d9987c9197ff
-        command:
-          - mongod
-          - --smallfiles
       - image: postgres@sha256:39696b28577201ff1d4af8d47020abfa5db193f2b75aa57db0c13b26482918d7
         environment:
           POSTGRES_USER: root
-        entrypoint:
-          - "/bin/sh"
-          - "-c"
-          - "exit 1"
       - image: redis@sha256:990e1f57798f433364379cf2583702d843defb7630d8d1bb12dcdc6ce3d91ddb
       - image: rabbitmq@sha256:42d02f57fe9a4dc50c48e44d31f67f9c823b798a7ebf26c78ec5b605def4baf9
 
