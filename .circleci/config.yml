@@ -12,8 +12,9 @@ jobs:
         environment:
           POSTGRES_USER: root
         entrypoint:
-          - "exit"
-          - "1"
+          - "/bin/sh"
+          - "-c"
+          - "exit 1"
       - image: redis@sha256:990e1f57798f433364379cf2583702d843defb7630d8d1bb12dcdc6ce3d91ddb
       - image: rabbitmq@sha256:42d02f57fe9a4dc50c48e44d31f67f9c823b798a7ebf26c78ec5b605def4baf9
 
