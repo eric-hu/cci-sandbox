@@ -20,7 +20,4 @@ jobs:
 
     steps:
       - run: for i in {1..5}; do       sleep 2;        echo "ping ${i}"; done
-      - run: for i in {1..5}; do       sleep 2;        echo "ping ${i}"; done
-      - run: for i in {1..5}; do       sleep 2;        echo "ping ${i}"; done
-      - run: for i in {1..5}; do       sleep 2;        echo "ping ${i}"; done
-      - run: for i in {1..5}; do       sleep 2;        echo "ping ${i}"; done
+      - run: exit 1
