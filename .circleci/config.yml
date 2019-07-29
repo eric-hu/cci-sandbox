@@ -9,4 +9,4 @@ jobs:
 
     steps:
       - run: env
-      - run: echo "hello"
+      - run: exit 1
