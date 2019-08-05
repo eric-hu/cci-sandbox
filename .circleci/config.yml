@@ -3,6 +3,11 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.4-node
-
     steps:
-      - run: exit 0
+      - run: exit 1
+
+workflows:
+  version: 2
+  btd:
+    jobs:
+      - build
