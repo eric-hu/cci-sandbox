@@ -1,8 +1,8 @@
-version: 2.1
+version: 2.0
 jobs:
   build:
     docker:
       - image: circleci/ruby:2.4-node
 
     steps:
-      - run: exit 0
+      - run: exit 1
