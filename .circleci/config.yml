@@ -5,4 +5,4 @@ jobs:
       - image: circleci/ruby:2.4-node
 
     steps:
-      - run: exit 1
+      - run: exit 0
