@@ -5,12 +5,17 @@ jobs:
       - image: circleci/ruby:2.4-node
     steps:
       - run: exit 1
+  long_wait:
+    docker:
+      - image: circleci/ruby:2.4-node
+
+    steps:
       - run:
-          command: sleep 30
-          when: on_fail
+          command: sleep 60
 
 workflows:
   version: 2
   btd:
     jobs:
       - build
+      - long_wait
