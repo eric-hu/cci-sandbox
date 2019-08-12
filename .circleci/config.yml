@@ -1,11 +1,37 @@
 version: 2.1
 jobs:
-  build:
+  sleep:
+    parameters:
+      time:
+        type: integer
+        default: 5
     docker:
       - image: circleci/ruby:2.4-node
-        environment:
-          - BUNDLE_PATH: vendor/bundle
-            ANOTHER_VAR: foo
-
     steps:
-      - run: env
+      - run: sleep <<parameters.time>>
+
+workflows:
+  workflow-one:
+    jobs:
+      - sleep:
+          name: sleep-1
+
+      - sleep:
+          name: sleep-2
+          time: 10
+          requires:
+            - sleep-1
+
+      - sleep:
+          name: sleep-3
+          requires:
+            - sleep-1
+
+      - sleep:
+          name: sleep-4
+          requires:
+            - sleep-3
+
+  workflow-two:
+    jobs:
+      - sleep
