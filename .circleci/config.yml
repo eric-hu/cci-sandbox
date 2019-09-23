@@ -5,3 +5,4 @@ jobs:
       - image: circleci/ruby:2.4-node
     steps:
       - run: sleep 2
+      - checkout
