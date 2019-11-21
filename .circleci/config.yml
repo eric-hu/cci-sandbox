@@ -1,7 +1,7 @@
 version: 2.1
 jobs:
   sleep:
-    parallelism: 300
+    parallelism: 2
     parameters:
       time:
         type: integer
