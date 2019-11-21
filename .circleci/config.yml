@@ -32,6 +32,10 @@ workflows:
           name: sleep-4
           requires:
             - sleep-3
+            - test-gate
+
+      - test-gate:
+          type: approval
 
   workflow-two:
     jobs:
