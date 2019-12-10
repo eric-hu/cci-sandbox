@@ -6,3 +6,12 @@ jobs:
     steps:
       - checkout
       - run: sleep 2
+
+workflows:
+  btd:
+    jobs:
+      - build:
+          filters:
+            tags:
+              only: /.*/
+
