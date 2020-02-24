@@ -4,5 +4,4 @@ jobs:
     docker:
       - image: circleci/ruby:2.4-node
     steps:
-      - checkout
-      - run: sleep 2
+      - echo $'\tstep 13\nstep13' && sleep 5
