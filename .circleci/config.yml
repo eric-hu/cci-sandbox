@@ -6,35 +6,15 @@ jobs:
       - image: circleci/ruby:2.4-node
 
     steps:
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
-      - run: for i in {1..50}; do       sleep 5;        echo "ping ${i}"; done
+      # Sleep for 10 seconds to allow for streaming testing
+      - run: sleep 10
+      # Produces >500kb of text
+      - run: for i in {1..500000}; do  echo "ping ${i}"; done
+      # Sleep for 10 seconds to allow for streaming testing
+      - run: sleep 10
+      # Produces >500kb of text
+      - run: for i in {1..500000}; do  echo "ping ${i}"; done
+      # Sleep for 10 seconds to allow for streaming testing
+      - run: sleep 10
+      # Produces >500kb of text
+      - run: for i in {1..500000}; do  echo "ping ${i}"; done
