@@ -6,15 +6,10 @@ jobs:
       - image: circleci/ruby:2.4-node
 
     steps:
-      # Sleep for 10 seconds to allow for streaming testing
-      - run: sleep 10
-      # Produces >500kb of text
-      - run: for i in {1..50000}; do  echo "ping ${i}"; done
-      # Sleep for 10 seconds to allow for streaming testing
-      - run: sleep 10
-      # Produces >500kb of text
-      - run: for i in {1..50000}; do  echo "ping ${i}"; done
-      # Sleep for 10 seconds to allow for streaming testing
-      - run: sleep 10
-      # Produces >500kb of text
-      - run: for i in {1..50000}; do  echo "ping ${i}"; done
+      - run: sleep 5
+      # Produces >500kb of text, then sleep for 5s
+      - run: for i in {1..50000}; do  echo "ping ${i}"; done && sleep 5
+      # Produces >500kb of text, then sleep for 5s
+      - run: for i in {1..50000}; do  echo "ping ${i}"; done && sleep 5
+      # Produces >500kb of text, then sleep for 5s
+      - run: for i in {1..50000}; do  echo "ping ${i}"; done && sleep 5
