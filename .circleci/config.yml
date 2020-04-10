@@ -7,9 +7,10 @@ jobs:
 
     steps:
       - run: sleep 5
-      # Produces >500kb of text, then sleep for 5s
-      - run: for i in {1..50000}; do  echo "ping ${i}"; done && sleep 5
-      # Produces >500kb of text, then sleep for 5s
-      - run: for i in {1..50000}; do  echo "ping ${i}"; done && sleep 5
-      # Produces >500kb of text, then sleep for 5s
-      - run: for i in {1..50000}; do  echo "ping ${i}"; done && sleep 5
+      - run: |
+          for dummy in {1...100}; do
+            for i in {1..5000}; do
+              printf '%*s \n' $i | tr ' ' "#"
+            done
+            sleep 1
+          done && sleep 5
