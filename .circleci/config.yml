@@ -3,10 +3,19 @@ jobs:
   build:
     docker:
       - image: circleci/ruby:2.4-node
-        environment:
-          - BUNDLE_PATH: vendor/bundle
-            ANOTHER_VAR: foo
-
     steps:
-      - run: env
+      - run: sleep 5
       - run: exit 1
+
+  slow-job:
+    docker:
+      - image: circleci/ruby:2.4-node
+    steps:
+      - run: sleep 20
+
+workflows:
+  version: 2
+  btd:
+    jobs:
+      - build
+      - slow-job
