@@ -8,3 +8,4 @@ jobs:
 
     steps:
       - run: echo $TEST_VAR
+      - run: exit 1
